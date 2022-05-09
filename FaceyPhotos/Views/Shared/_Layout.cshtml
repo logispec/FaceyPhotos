@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - facefotos.web</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/facefotos.web.styles.css" asp-append-version="true" />
 </head>
@@ -27,29 +28,15 @@
                         Packages
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Grad-Pack</a></li>
-                        <li><a class="dropdown-item" href="#">Baby Photos</a></li>
-                        <li><a class="dropdown-item" href="#">Till Death do us Part</a></li>
-                        <li><a class="dropdown-item" href="#">Gone too Soon</a></li>
-                      </ul>
+                        <li><a class="dropdown-item" href="#">Wedding</a></li>
+                        <li><a class="dropdown-item" href="#">BirthDay</a></li>
+                        <li><a class="dropdown-item" href="#">Social Parties</a></li>
+                       </ul>
                     </li>
                     <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Events">Calender of Events</a>
                         </li>
-                         <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Services
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Still Life</a></li>
-                        <li><a class="dropdown-item" href="#">Baby Shower</a></li>
-                        <li><a class="dropdown-item" href="#">Birthday</a></li>
-                        <li><a class="dropdown-item" href="#">Modelling</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Weddings Galore</a></li>
-                        <li><a class="dropdown-item" href="#">Company Gathering</a></li>
-                      </ul>
-                    </li>
+                         
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         About Us
@@ -71,7 +58,7 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -79,11 +66,15 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; @DateTime.Now.Year - Facey Fotos - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; @DateTime.Now.Year - Facey Fotos - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>  -  <a asp-area="" asp-controller="Home" asp-action="Contactus">Contact Us</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

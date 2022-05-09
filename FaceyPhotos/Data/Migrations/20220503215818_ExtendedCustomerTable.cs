@@ -13,7 +13,7 @@ namespace FaceyPhotos.Data.Migrations
                 name: "Address",
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
-                nullable: false,
+                nullable: true,
                 defaultValue: "");
 
             migrationBuilder.AddColumn<DateTime>(
@@ -34,7 +34,7 @@ namespace FaceyPhotos.Data.Migrations
                 name: "Firstname",
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
-                nullable: false,
+                nullable: true,
                 defaultValue: "");
 
             migrationBuilder.AddColumn<string>(

@@ -2,7 +2,44 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Welcome To Facey Photos</h2>
+        </div>  
+    </div>
+    <div class="row products">
+        <div class="col-md-6 product">
+            <div class="well">
+            <h4>Weddings</h4>
+            <p><strong>$18,500.00</strong></p>
+            <p>If you are seeking professional services for your upcomming wedding look no further as we have a special for you.</p>
+            <a class="btn btn-primary" href=" @Url.Action("Index","Wedding")">More Details</a>
+            </div>
+        </div>
+        <div class="col-md-6 product">
+            <div class="well">
+            <h4>Graduations</h4>
+            <p><strong>$13,500.00</strong></p>
+            <p>If you are seeking professional services for your upcomming wedding look no further as we have a special for you.</p>
+            <a class="btn btn-primary" href=" @Url.Action("Index","Graduation")">More Details</a>
+            </div>
+        </div>
+        <div class="col-md-6 product">
+            <div class="well">
+            <h4>Social Parties</h4>
+            <p><strong>$20,000.00</strong></p>
+            <p>If you are seeking professional services for your upcomming wedding look no further as we have a special for you.</p>
+            <a class="btn btn-primary" href=" @Url.Action("Index","Social")">More Details</a>
+            </div>
+        </div>
+        <div class="col-md-6 product">
+            <div class="well">
+            <h4>Beach Shoot</h4>
+            <p><strong>$25,500.00</strong></p>
+            <p>If you are seeking professional services for your upcomming wedding look no further as we have a special for you.</p>
+            <a class="btn btn-primary" href=" @Url.Action("Index","Beach")">More Details</a>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,5 +1,7 @@
 ﻿namespace FaceyPhotos.Data
 {
+
+   
     public class Contact : BaseEntity
     {
         public string PhoneNumber { get; set; }
