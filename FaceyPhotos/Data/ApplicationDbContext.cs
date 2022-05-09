@@ -17,6 +17,8 @@ namespace FaceyPhotos.Data
        //public System.Data.Entity.DbSet<AppointmentCalendar.Models.Appointment> Appointments { get; set; }
         public DbSet<Contact>Contacts { get; set; }
         public DbSet<Service>Services { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Sale> Sales { get; set; }
 
     }
 }
