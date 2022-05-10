@@ -4,6 +4,7 @@ using FaceyPhotos.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FaceyPhotos.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220509215621_AddedDefaultUsersandRoles")]
+    partial class AddedDefaultUsersandRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -158,7 +160,7 @@ namespace FaceyPhotos.Data.Migrations
                         {
                             Id = "cc371dac-6edd-48c4-862f-466300e46c21",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "eb564ab0-9de6-41af-8276-c56be01a2647",
+                            ConcurrencyStamp = "f68b0986-1585-4d93-b95a-18de6a2a2ebb",
                             CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "webmaster@localhost.com",
@@ -169,9 +171,9 @@ namespace FaceyPhotos.Data.Migrations
                             ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NormalizedEmail = "WEBMASTER@LOCALHOST.COM",
                             NormalizedUserName = "WEBMASTER@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEO9GQxAY9M4Ck8MZn9RPGiJPVcU0xodxHKZI/SuxDGIA2rhrdwMC3ZXX+jF/1SCoMg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOLxLuMfpi2a04jj5fEhgdsaRNzGe6ephVjxWEGDYK+sYeClYQirkVwR3jdOP3swnA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d70ee2be-83a8-4da3-9638-1ff50b499ab5",
+                            SecurityStamp = "45d8cea5-c843-4b4c-bc59-5aba913f2d47",
                             TwoFactorEnabled = false,
                             UserName = "webmaster@localhost.com"
                         },
@@ -179,7 +181,7 @@ namespace FaceyPhotos.Data.Migrations
                         {
                             Id = "d0d2aa73-1312-4ed7-b309-75b8563e8092",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "095c1435-eeed-4f30-b68d-5c5a7464de5c",
+                            ConcurrencyStamp = "e5861d69-201e-4ecb-89ef-3341d28d4a99",
                             CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "client@localhost.com.com",
@@ -190,9 +192,9 @@ namespace FaceyPhotos.Data.Migrations
                             ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NormalizedEmail = "CLIENT@LOCALHOST.COM",
                             NormalizedUserName = "CLIENT@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEE5R3A+bYJ7JuHAVcEtTFFBv3wpom5tRbXT6emeeCAV9lXWLNDz5/t/tAavV44753Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEL3UwVL3nNSl+TTu0r1rGm1atth4m6+XoMEvZmlcKKvbaXXOgzp3QoJKL4nGx2mFSg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "68e22d8d-e973-4f27-9db1-8a8e754e9174",
+                            SecurityStamp = "c1144b02-699b-4689-a37e-c3e567157289",
                             TwoFactorEnabled = false,
                             UserName = "client@localhost.com"
                         });
@@ -219,9 +221,6 @@ namespace FaceyPhotos.Data.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
 
                     b.Property<string>("SKU")
                         .IsRequired()
@@ -347,14 +346,14 @@ namespace FaceyPhotos.Data.Migrations
                         new
                         {
                             Id = "cc388dac-6edd-64c4-263f-4845196e45c21",
-                            ConcurrencyStamp = "a45942f8-c9af-4d9c-8bb1-37f6cd5997d4",
+                            ConcurrencyStamp = "5bf4b717-f4db-4525-8bf3-cb6d17f7eff6",
                             Name = "Webmaster",
                             NormalizedName = "WEBMASTER"
                         },
                         new
                         {
                             Id = "cc125dac-6afd-48b4-252f-887900e46b53",
-                            ConcurrencyStamp = "5591de42-1220-4efb-9574-8b3c5f459be4",
+                            ConcurrencyStamp = "345d85ff-21ad-4d92-afd0-94571aea528a",
                             Name = "User",
                             NormalizedName = "USER"
                         });

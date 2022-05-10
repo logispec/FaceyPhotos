@@ -89,6 +89,9 @@ namespace FaceyPhotos.Areas.Identity.Pages.Account
             [Display(Name = "Gender")]
             public string Gender { get; set; }
             public string Address { get; set; }
+            [DataType(DataType.PhoneNumber)]
+            [Display(Name = "Phone Number")]
+            public string PhoneNumber { get; set; }
             public string Parish { get; set; }
             [DataType(DataType.Date)]
             [Display(Name = "Date of Birth")]
@@ -134,12 +137,21 @@ namespace FaceyPhotos.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                user.Firstname = Input.Firstname;
+                user.Lastname = Input.Lastname;
+                user.DateOfBirth = Input.DateOfBirth;
+                user.Address = Input.Address;
+                user.CreatedOn = Input.CreatedOn;
+                user.Gender = Input.Gender;
+                user.Parish = Input.Parish;
+                user.PhoneNumber = Input.PhoneNumber;
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-
+                   await _userManager.AddToRoleAsync(user, "User");
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FaceyPhotos.Data.Product>
+﻿@model IEnumerable<ProductVM>
 
 @{
     ViewData["Title"] = "Index";
@@ -18,14 +18,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.Cost)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Created)
+             <th>
+                @Html.DisplayNameFor(model => model.SKU)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CreatedBy)
+                @Html.DisplayNameFor(model => model.Quantity)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Updated)
+             <th>
+                @Html.DisplayNameFor(model => model.details)
             </th>
             <th></th>
         </tr>
@@ -40,13 +40,10 @@
                 @Html.DisplayFor(modelItem => item.Cost)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Created)
+                @Html.DisplayFor(modelItem => item.SKU)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreatedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Updated)
+                @Html.DisplayFor(modelItem => item.details)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

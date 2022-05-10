@@ -7,22 +7,29 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FaceyPhotos.Data;
+using Microsoft.AspNetCore.Authorization;
+using AutoMapper;
+using FaceyPhotos.Models;
 
 namespace FaceyPhotos.Controllers
 {
+    [Authorize(Roles = "Webmaster")]
     public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IMapper mapper;
 
-        public ProductsController(ApplicationDbContext context)
+        public ProductsController(ApplicationDbContext context, IMapper mapper)
         {
             _context = context;
+            this.mapper = mapper;
         }
 
         // GET: Products
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Products.ToListAsync());
+            var Products = mapper.Map<List<ProductVM>>( await _context.Products.ToListAsync());
+            return View(Products);
         }
 
         // GET: Products/Details/5
