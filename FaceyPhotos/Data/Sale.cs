@@ -11,7 +11,7 @@ namespace FaceyPhotos.Data
 
         [ForeignKey("CustomerId")]
         public Customer Customer { get; set; }
-        public string CustomerId { get; set; }
+        public string? CustomerId { get; set; }
 
         public int ProductId { get; set; }
 
