@@ -33,17 +33,13 @@
                         <li><a class="dropdown-item" href="#">Social Parties</a></li>
                        </ul>
                     </li>
-                    <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Events">Calender of Events</a>
-                        </li>
-                         
-                    <li class="nav-item dropdown">
+                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         About Us
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Directors</a></li>
-                        <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                        <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Contactus">Contact Us</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Customer Reviews</a></li>
                       </ul>

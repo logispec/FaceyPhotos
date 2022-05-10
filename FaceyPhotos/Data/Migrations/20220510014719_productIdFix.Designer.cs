@@ -4,6 +4,7 @@ using FaceyPhotos.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FaceyPhotos.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220510014719_productIdFix")]
+    partial class productIdFix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,7 +64,7 @@ namespace FaceyPhotos.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contacts", (string)null);
+                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("FaceyPhotos.Data.Customer", b =>
@@ -158,7 +160,7 @@ namespace FaceyPhotos.Data.Migrations
                         {
                             Id = "cc371dac-6edd-48c4-862f-466300e46c21",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f6b96eeb-0cda-4e01-9b43-86e8e06592a5",
+                            ConcurrencyStamp = "e58533bb-78bb-4a0c-b97b-886c5322967f",
                             CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "webmaster@localhost.com",
@@ -169,9 +171,9 @@ namespace FaceyPhotos.Data.Migrations
                             ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NormalizedEmail = "WEBMASTER@LOCALHOST.COM",
                             NormalizedUserName = "WEBMASTER@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDcftg5PIZIfZocc2fAisyXILJH3oMmWDA1TEq2qfubn6vhRnuhg1tcYwBDhNlR7cw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEVlTclta/HH9YRnCuMsvRQ9GViKugkrhJJZsaQsi9caBJJo4EjaNJgRq8IH+GszGg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4eaeab12-0b25-4ae5-9b93-6e7e221d07e7",
+                            SecurityStamp = "fb2bb03a-4736-46d9-b2d6-1ed458cd8174",
                             TwoFactorEnabled = false,
                             UserName = "webmaster@localhost.com"
                         },
@@ -179,7 +181,7 @@ namespace FaceyPhotos.Data.Migrations
                         {
                             Id = "d0d2aa73-1312-4ed7-b309-75b8563e8092",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "182ec953-14af-41b9-87c4-1955219cceb8",
+                            ConcurrencyStamp = "77cc3708-0005-49d7-ae08-b4362771f245",
                             CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "client@localhost.com.com",
@@ -190,9 +192,9 @@ namespace FaceyPhotos.Data.Migrations
                             ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NormalizedEmail = "CLIENT@LOCALHOST.COM",
                             NormalizedUserName = "CLIENT@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGoakDFVvNibBAjHOk6IAPCs8CP7gwcLioilHX5AxwN3VwpdCaYK8QzmwCM/XIUD5Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHmckv4cTi0OUzTUz8SD03Bg8tTNTUB+xbhdtaTGhb2Lb4Br3UBysZZ+BvNobB+cBw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5de86618-4d9e-4fb8-a818-d02e713f676b",
+                            SecurityStamp = "c7025489-3464-4900-94cd-3ab3f0254265",
                             TwoFactorEnabled = false,
                             UserName = "client@localhost.com"
                         });
@@ -232,7 +234,7 @@ namespace FaceyPhotos.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("FaceyPhotos.Data.Sale", b =>
@@ -266,7 +268,7 @@ namespace FaceyPhotos.Data.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Sales", (string)null);
+                    b.ToTable("Sales");
                 });
 
             modelBuilder.Entity("FaceyPhotos.Data.Service", b =>
@@ -307,7 +309,7 @@ namespace FaceyPhotos.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Services", (string)null);
+                    b.ToTable("Services");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -340,14 +342,14 @@ namespace FaceyPhotos.Data.Migrations
                         new
                         {
                             Id = "cc388dac-6edd-64c4-263f-4845196e45c21",
-                            ConcurrencyStamp = "14b6be2f-d47e-4fcb-b02c-af5ed986a252",
+                            ConcurrencyStamp = "4ce1299d-1ac1-487a-b9df-b4468dfb3e85",
                             Name = "Webmaster",
                             NormalizedName = "WEBMASTER"
                         },
                         new
                         {
                             Id = "cc125dac-6afd-48b4-252f-887900e46b53",
-                            ConcurrencyStamp = "9da63f6c-19bb-4e00-bf09-163aba28a744",
+                            ConcurrencyStamp = "e50133c4-bf40-4334-9e10-90113eb615b7",
                             Name = "User",
                             NormalizedName = "USER"
                         });
