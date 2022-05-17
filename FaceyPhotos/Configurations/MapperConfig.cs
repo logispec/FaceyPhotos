@@ -8,7 +8,7 @@ namespace FaceyPhotos.Configurations
     {
         public MapperConfig()
         {
-            CreateMap<Product, ProductVM>();
+            CreateMap<Product, ProductVM>().ReverseMap();
         }
 
     }
