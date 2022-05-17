@@ -62,7 +62,7 @@ namespace FaceyPhotos.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contacts");
+                    b.ToTable("Contacts", (string)null);
                 });
 
             modelBuilder.Entity("FaceyPhotos.Data.Customer", b =>
@@ -232,7 +232,7 @@ namespace FaceyPhotos.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("FaceyPhotos.Data.Sale", b =>
@@ -266,7 +266,7 @@ namespace FaceyPhotos.Data.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Sales");
+                    b.ToTable("Sales", (string)null);
                 });
 
             modelBuilder.Entity("FaceyPhotos.Data.Service", b =>
@@ -307,7 +307,7 @@ namespace FaceyPhotos.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Services");
+                    b.ToTable("Services", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

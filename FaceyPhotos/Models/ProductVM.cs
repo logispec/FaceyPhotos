@@ -14,6 +14,7 @@ public class ProductVM
     public int Quantity { get; set; }
     [Required]
     public float Cost { get; set; }
+   
 
 }
 
